@@ -9,7 +9,7 @@ import uuid
 from order import Order, OrderStatus
 
 ASSEMBLE_TIME = 0.05  # set to 45
-LEAVE_TIME = 0.05  # set to 60
+LEAVE_TIME = 0.04  # set to 60
 DELIVERY_CONSTANT = 0.03  # set to 30
 PASS_TIME = 0.5  # set to 60
 
@@ -70,14 +70,6 @@ class Worker(ABC):
     @work_finish_time.setter
     def work_finish_time(self, value: float) -> None:
         self._work_finish_time = value
-
-    @property
-    def shift_finish_time(self, store_id):
-        return self._shift_finish_time[store_id]
-
-    @shift_finish_time.setter
-    def shift_finish_time(self, value: float, store_id) -> None:
-        self._shift_finish_time[store_id] = value
 
     @property
     def balance(self):

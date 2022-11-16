@@ -1,8 +1,7 @@
 import time
-from collections import defaultdict
 import uuid
 
-from order import Item, Order
+from order import Item
 from provider import Provider
 from worker import Courier, Storekeeper
 from store import Store
